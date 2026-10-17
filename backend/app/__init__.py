@@ -1,0 +1,1 @@
+"""Labagotchi FastAPI Backend Package."""

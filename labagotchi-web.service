@@ -1,0 +1,14 @@
+[Unit]
+Description=Labagotchi Vite Frontend Server (Port 5173)
+After=network.target labagotchi-api.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/labagotchi/frontend
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ExecStart=/usr/bin/npm run preview -- --host 0.0.0.0 --port 5173
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
